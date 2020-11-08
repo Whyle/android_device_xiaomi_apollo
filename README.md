@@ -48,14 +48,14 @@ repo sync
 Then add these projects to .repo/manifest.xml:
 
 ```xml
-<project path="device/xiaomi/apollo" name="TeamWin/android_device_xiaomi_apollo" remote="github" revision="android-10.0" />
+<project path="device/xiaomi/apollo" name="Whyle/android_device_xiaomi_apollo" remote="github" revision="android-10.0" />
 ```
 
 Finally execute these:
 
 ```
 . build/envsetup.sh
-lunch device_apollo-eng
+lunch omni_apollo-eng
 mka recoveryimage ALLOW_MISSING_DEPENDENCIES=true # Only if you use minimal twrp tree.
 ```
 

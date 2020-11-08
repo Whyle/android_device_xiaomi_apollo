@@ -26,7 +26,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := apollo
-PRODUCT_NAME := device_apollo
+PRODUCT_NAME := omni_apollo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 10T
 PRODUCT_MANUFACTURER := Xiaomi
