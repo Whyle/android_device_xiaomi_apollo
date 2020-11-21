@@ -17,4 +17,5 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/omni_apollo.mk
 
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 COMMON_LUNCH_CHOICES := omni_apollo-eng
