@@ -58,7 +58,8 @@ Finally execute these:
 ```
 . build/envsetup.sh
 lunch omni_apollo-eng
-mka recoveryimage ALLOW_MISSING_DEPENDENCIES=true # Only if you use minimal twrp tree.
+export ALLOW_MISSING_DEPENDENCIES=true # Only if you use minimal twrp tree.
+mka recoveryimage 
 ```
 
 To test it:
