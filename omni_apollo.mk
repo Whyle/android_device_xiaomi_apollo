@@ -28,19 +28,14 @@ $(call inherit-product, vendor/omni/config/common.mk)
 PRODUCT_DEVICE := apollo
 PRODUCT_NAME := omni_apollo
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Mi 10T
+PRODUCT_MODEL := M2007J3SG
 PRODUCT_MANUFACTURER := Xiaomi
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2099-12-31
 
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
-    ro.bootimage.build.date.utc \
-    ro.build.date.utc
-
 
 PRODUCT_PACKAGES += fastbootd
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root)
-
+#PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root)
 

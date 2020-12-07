@@ -1,2 +1,6 @@
-ro.product.model=Redmi K30S Ultra
+#ro.product.model=Redmi K30S Ultra
 ro.display.series=Redmi K30S Ultra
+ro.product.odm.model=M2007J3SC
+ro.product.model=M2007J3SC
+ro.product.system.model=M2007J3SC
+ro.product.vendor.model=M2007J3SC

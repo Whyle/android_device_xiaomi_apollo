@@ -28,10 +28,9 @@
 # Firmware directory Path
 # Below macro will be read by uevent and path will
 # be added to search path for firmware loading
-# MI change, add /apex/com.xiaomi.wifi/etc/firmware/ and /vendor/firmware_wlan/
+	# MI change, add /apex/com.xiaomi.wifi/etc/firmware/ and /vendor/firmware_wlan/
 # the order is critical, not change
 firmware_directories /apex/com.xiaomi.wifi/etc/firmware/ /vendor/firmware_mnt/image/ /vendor/firmware_wlan/
-
 # the DIAG device node is not world writable/readable.
 /dev/diag                 0660   system     oem_2901
 
@@ -146,7 +145,6 @@ firmware_directories /apex/com.xiaomi.wifi/etc/firmware/ /vendor/firmware_mnt/im
 /dev/sec_nvm_*            0660   system     system
 /dev/cryptoapp            0660   system     system
 /dev/spdaemon_ssr         0660   system     system
-/dev/spu_hal_ssr          0660   system     system
 /dev/iuicc                0660   system     system
 /dev/iuicc0               0660   system     system
 /dev/iuicc1               0660   system     system
@@ -303,6 +301,7 @@ firmware_directories /apex/com.xiaomi.wifi/etc/firmware/ /vendor/firmware_mnt/im
 /sys/bus/pci/drivers/wil6210* 0000:01:00.0/net/wigig0/queues/rx-0/rps_cpus 0660 system system
 /sys/bus/pci/drivers/wil6210* 0000:01:00.0/net/wigig0/gro_flush_timeout 0660 system system
 /sys/devices/virtual/net/bond0 queues/rx-0/rps_cpus 0660 system system
+/dev/wigig_sensing        0660   system     system
 
 #nfc permissions
 /dev/nfc-nci              0660    nfc         nfc
@@ -313,6 +312,9 @@ firmware_directories /apex/com.xiaomi.wifi/etc/firmware/ /vendor/firmware_mnt/im
 /dev/uio0                 0660   system     system
 /dev/uio1                 0660   system     system
 /dev/uio2                 0660   system     system
+
+#spi ir nodes
+/dev/ir_spi               0660   system     system
 
 # SSR devices
 /dev/subsys_*         0640   system     system
@@ -348,12 +350,6 @@ firmware_directories /apex/com.xiaomi.wifi/etc/firmware/ /vendor/firmware_mnt/im
 
 # Kmsg device
 /dev/kmsg                                               0620   root       system
-
-# mius iio devices
-/dev/iio:device*                                        0660   system     system
-/sys/devices/platform/us_prox.0/iio:device* buffer/enable                  0600 system system
-/sys/devices/platform/us_prox.0/iio:device* scan_elements/in_proximity_en  0600 system system
-/sys/devices/platform/us_prox.0/iio:device* scan_elements/in_timestamp_en  0600 system system
 
 # LED class devices
 /sys/class/leds/red      delay_on     0640    system    system
@@ -408,9 +404,8 @@ firmware_directories /apex/com.xiaomi.wifi/etc/firmware/ /vendor/firmware_mnt/im
 /sys/class/graphics/fb0     modes                    0664    system  graphics
 /sys/class/graphics/fb0     mode                     0664    system  graphics
 /sys/class/graphics/fb0     msm_cmd_autorefresh_en   0664    system  graphics
-/sys/class/kgsl/kgsl-3d0    pwrscale                 0664    root  system
-/sys/class/kgsl/kgsl-3d0    devfreq/governor         0664    root  system
-/sys/class/kgsl/kgsl-3d0    force_rail_on            0664    root  system
-/sys/class/kgsl/kgsl-3d0    force_bus_on             0664    root  system
-/sys/class/kgsl/kgsl-3d0    force_clk_on             0664    root  system
-/sys/class/kgsl/kgsl-3d0    bus_split                0664    root  system
+
+# Elliptic
+/dev/elliptic0                 0644   system       system
+/dev/elliptic1                 0644   system       system
+
