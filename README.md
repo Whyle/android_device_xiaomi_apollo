@@ -3,7 +3,7 @@ For building TWRP for Xiaomi Mi 10T / 10T Pro / Redmi K30S
 
 *STATUS: TESTING*
 
- - 对于 红米K30S Ultra 有问题的话联系我。 QQ：980147073
+ - 对于 红米K30S Ultra 有问题的话联系我。 QQ群：https://jq.qq.com/?_wv=1027&k=L7zFfYra
 
 The Xiaomi Mi 10T serie (codenamed _"apollo"_) are high-end smartphones from Xiaomi.
 
