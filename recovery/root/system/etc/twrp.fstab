@@ -11,6 +11,8 @@ odm		/odm		ext4		display="Odm";logical
 
 # mount_point	 fstype			path					flags
 /system_image     emmc     /dev/block/mapper/system                         flags=display="System Image";backup=0;flashimg=1
+/vendor_image     emmc     /dev/block/mapper/vendor                         flags=display="Vendor Image";backup=0;flashimg=1
+/product_image    emmc     /dev/block/mapper/product                        flags=display="Product Image";backup=0;flashimg=1
 /cache		  ext4	   /dev/block/bootdevice/by-name/cache	
 /logfs            vfat     /dev/block/bootdevice/by-name/logfs              flags=display="logfs"
 /boot		  emmc	   /dev/block/bootdevice/by-name/boot
